@@ -1,14 +1,5 @@
 /* @import url("pico.jade.min.css"); */
-@import url("pico.jade.css");
-@import url("pico.colors.min.css");
-
-/* h1 {
-    color: var(--pico-color-jade-800);
-} */
-
-/* h2 {
-    color: var(--pico-color-jade-500);
-} */
+@import url("pico.jade.min.css");
 
 /* Font */
 :root{
@@ -25,11 +16,14 @@ p {
 }
 
 header {
-    position: sticky; top: 0;
+    position: sticky;
+    top: 0;
     height: 110px;
+    background-color: rgba(0, 255, 0);
     background-color: var(--pico-background-color);
-    opacity: .95;
+    opacity: .9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure header stays above other content */
 }
 .footer-text {
     text-align: center;
@@ -37,6 +31,7 @@ header {
 }
 .focus {
     text-align:center;
+    animation: fadeIn 2s ease forwards; /* 2s fade-in animation */
 }
 
 .multicolour-text {
@@ -60,8 +55,27 @@ a.anchor {
 }
 
 .article-fixed {
-    height: 90%;
-    /* background-color: var(--pico-secondary-inverse); */
+    /* height: 80%; */
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.slow-transition {
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.5s ease forwards .5s; /* 2s fade-in animation */
+}
+
+.fast-transition {
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn .5s ease forwards; /* 2s fade-in animation */
+}
+
+/* Keyframes for the fade-in effect */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fully visible */
+    }
 }
 
 .link-box-parent {
@@ -71,7 +85,10 @@ a.anchor {
     /* grid-template-rows: auto auto; */
     grid-column-gap: 30px;
     grid-row-gap: 10px;
-    /* width: 50%; */
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+
     }
 
     .div1 { grid-area: 1 / 1 / 2 / 2; }
@@ -83,7 +100,7 @@ a.anchor {
     display: flex;
     align-items: flex-start; /* Align items to the top */
     gap: 30px; /* Space between image and text */
-
+    max-width: 900px;
 }
 
 .image-column {
@@ -91,22 +108,23 @@ a.anchor {
     max-width:auto;
     max-height:15rem;
     overflow: hidden;
-    border-radius: 10px; /* Rounded corners for the rectangle */
+    border-radius: 6px; /* Rounded corners for the rectangle */
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
+
+
 
 .image-column img {
     max-width: auto;
     max-height: 15rem; /* Maintain aspect ratio */
     display: block; /* Ensure the image does not add inline space */
-
     }
 
 .text-column {
 flex: 1; /* The text takes up the remaining space */
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 500px) {
     .article-card {
       flex-direction: column; /* Stack the image and text on smaller screens */
     }
