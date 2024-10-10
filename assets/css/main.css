@@ -1,19 +1,19 @@
 /* @import url("pico.jade.min.css"); */
-@import url("pico.jade.min.css");
+@import url("pico.jade.css");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap");
 
 /* Font */
-:root{
-  --pico-font-size: 110%;
-  --pico-spacing: .9rem;
+:root {
+    --pico-font-size: 110%;
+    --pico-spacing: .9rem;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 p {
-    color:var(--pico-muted-color);
+    color: var(--pico-muted-color);
 }
 
 body {
@@ -21,13 +21,21 @@ body {
 }
 
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Figtree', sans-serif; /* Ensure Figtree is used for headings */
-    font-weight: 600; /* Adjust weight for bolder headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Figtree', sans-serif;
+    /* Ensure Figtree is used for headings */
+    font-weight: 600;
+    /* Adjust weight for bolder headings */
 }
 
 .svg-fill-direct {
-    fill: var(--pico-background-color); /* Use the CSS variable directly */
+    fill: var(--pico-background-color);
+    /* Use the CSS variable directly */
 }
 
 header {
@@ -38,20 +46,41 @@ header {
     background-color: var(--pico-background-color);
     opacity: .95;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensure header stays above other content */
+    z-index: 1000;
+    /* Ensure header stays above other content */
 }
+
 .footer-text {
     text-align: center;
     font-size: 50%;
 }
+
 .focus {
-    text-align:center;
-    animation: fadeIn 2s ease forwards; /* 2s fade-in animation */
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    animation: fadeIn 2s ease forwards;
+    /* 2s fade-in animation */
 }
 
 .logo {
-  height: 60px;
-  margin-right: 20px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.icon-label {
+    text-align: center;
+    font-size: 80%;
+
+}
+.icon {
+    height: 2.5rem;
+    /* stroke: var(--pico-h2-color); */
+    fill: var(--pico-h2-color);
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
 }
 /*
 .multicolour-text {
@@ -71,11 +100,11 @@ header {
     text-align: center;
     font-size: 3rem;
     background: linear-gradient(to top right,
-      #d34317,
-  #d45a10,
-  #d56f0b,
-  #d4810d,
-  #d39317);
+            #d34317,
+            #d45a10,
+            #d56f0b,
+            #d4810d,
+            #d39317);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -91,23 +120,28 @@ a.anchor {
     height: 80%;
     max-width: 900px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 3rem;
 }
 
 .slow-transition {
-  opacity: 0; /* Initially hidden */
-  animation: fadeIn 1.5s ease forwards .5s; /* 2s fade-in animation */
+    opacity: 0;
+    /* Initially hidden */
+    animation: fadeIn 1.5s ease forwards .5s;
+    /* 2s fade-in animation */
 }
 
 .fast-transition {
-  opacity: 0; /* Initially hidden */
-  animation: fadeIn .5s ease forwards; /* 2s fade-in animation */
+    opacity: 0;
+    /* Initially hidden */
+    animation: fadeIn .5s ease forwards;
+    /* 2s fade-in animation */
 }
 
 /* Keyframes for the fade-in effect */
 @keyframes fadeIn {
     to {
-        opacity: 1; /* Fully visible */
+        opacity: 1;
+        /* Fully visible */
     }
 }
 
@@ -125,10 +159,11 @@ a.anchor {
 }
 
 .display-card {
-  height: 100%;
-  text-align: center;
-  vertical-align: middle;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
 }
+
 /*
     .div1 { grid-area: 1 / 1 / 2 / 2; }
     .div2 { grid-area: 1 / 2 / 2 / 3; }
@@ -137,32 +172,55 @@ a.anchor {
 
 .article-card {
     display: flex;
-    align-items: flex-start; /* Align items to the top */
-    gap: 30px; /* Space between image and text */
+    align-items: flex-start;
+    /* Align items to the top */
+    gap: 30px;
+    /* Space between image and text */
     max-width: 900px;
 }
 
 .image-column {
 
-    max-width:auto;
-    max-height:15rem;
+    max-width: auto;
+    max-height: 15rem;
     overflow: hidden;
-    border-radius: 6px; /* Rounded corners for the rectangle */
+    border-radius: 6px;
+    /* Rounded corners for the rectangle */
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .image-column img {
     max-width: auto;
-    max-height: 15rem; /* Maintain aspect ratio */
-    display: block; /* Ensure the image does not add inline space */
-    }
-
-.text-column {
-flex: 1; /* The text takes up the remaining space */
+    max-height: 15rem;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Ensure the image does not add inline space */
 }
 
-@media (max-width: 500px) {
+.text-column {
+    flex: 1;
+    /* The text takes up the remaining space */
+}
+
+@media (max-width: 1100px) {
     .article-card {
-      flex-direction: column; /* Stack the image and text on smaller screens */
+        flex-direction: column;
+        /* Stack the image and text on smaller screens */
     }
-  }
+}
+
+.image-full{
+    max-width: auto;
+    max-height:40rem;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.image-full img {
+    max-width: auto;
+    max-height: 15rem;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Ensure the image does not add inline space */
+}
