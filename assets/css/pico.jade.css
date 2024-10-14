@@ -225,7 +225,7 @@ details summary[role=button]:not(.outline)::after {
  */
 [data-theme=light],
 :root:not([data-theme=dark]) {
-  --pico-background-color: #f3fff5;
+  --pico-background-color: #ffffff;
   --pico-color: #373c44;
   --pico-text-selection-color: rgba(0, 166, 110, 0.25);
   --pico-muted-color: #646b79;
