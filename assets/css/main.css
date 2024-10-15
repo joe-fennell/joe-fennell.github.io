@@ -97,7 +97,7 @@ nav ul li {
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     .article-card {
         flex-direction: column;
         /* Stack the image and text on smaller screens */
@@ -291,8 +291,6 @@ a.anchor {
     flex: 1;
     /* The text takes up the remaining space */
 }
-
-
 
 .image-full{
     max-width: auto;
