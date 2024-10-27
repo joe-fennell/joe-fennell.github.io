@@ -1,5 +1,5 @@
 /* @import url("pico.jade.min.css"); */
-@import url("pico.jade.css");
+@import url("pico.jade.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap");
 
 /* Font */
@@ -31,6 +31,45 @@ h6 {
     font-weight: 500;
     /* Adjust weight for bolder headings */
 }
+
+.container-sidebar {
+    margin-right: 170px;
+}
+
+.sidebar {
+    padding-left: 30px;
+    margin: 10 auto;
+}
+
+aside {
+    position: fixed;
+    right: 0; /* Position sidebar on the right */
+    width: 200px;
+    height: 30%;
+    padding: 1rem;
+    z-index: 500;
+  }
+
+  aside nav {
+    list-style: none; /* Optional: Remove bullets */
+    text-align: right; /* Right-align text within the ul */
+  }
+  aside nav a {
+    color: var(--pico-muted-color);
+  }
+
+/* Highlight the active menu item using :target */
+.highlight {
+    /* background-color: var(--pico-primary-focus);
+    padding-right: .5rem;
+    border-radius: 6px; */
+    /* color: white; */
+    text-decoration: underline;
+  }
+  .highlight a {
+    
+    color: var(--pico-primary-hover);
+  }
 
 .long-logo {
     display: flex;
@@ -106,6 +145,12 @@ nav ul li {
     .image-column {
         margin: 0 auto;
     }
+    aside {
+        display: none;
+      }
+    .container-sidebar {
+        margin-right: 0;
+    }
 }
 
 .footer-text {
@@ -115,7 +160,7 @@ nav ul li {
 
 .focus {
     margin-top: 3rem;
-    margin-bottom: 45%;
+    margin-bottom: 5%;
     text-align: center;
     animation: fadeIn 2s ease forwards;
     /* 2s fade-in animation */
@@ -260,7 +305,7 @@ a.anchor {
 .image-column img {
     max-width: 10rem;
     /* max-height: auto; */
-    vertical-align: middle;
+    /* vertical-align: middle; */
     /* Maintain aspect ratio */
     display: block;
     /* Ensure the image does not add inline space */
