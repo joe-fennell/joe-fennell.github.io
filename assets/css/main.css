@@ -310,6 +310,26 @@ a.anchor {
     max-width: 900px;
 }
 
+.text-column ul {
+    padding: 0;
+}
+
+.text-column ul li {
+    list-style: none;
+}
+
+.text-column ul li a{
+    text-decoration: none;
+}
+
+.custom-accordion {
+    max-width: 150px; /* Adjust this to your desired width */
+}
+
+.custom-accordion a {
+    font-weight: bold;
+}
+
 .image-column {
     max-width: 10rem;
     overflow: hidden;
@@ -352,6 +372,7 @@ a.anchor {
 
 .text-column {
     flex: 1;
+    list-style: none;
 }
 
 .image-full {
