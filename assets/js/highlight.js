@@ -2,20 +2,24 @@
 let lastHighlightedSection = "";
 
 document.addEventListener("scroll", () => {
-  const sections = document.querySelectorAll("main section a");
+  const sections = document.querySelectorAll("main section article a");
   const menuLinks = document.querySelectorAll("aside nav li a");
 
   let closestSection = null;
   let closestDistance = Infinity;
 
   sections.forEach(section => {
+    // Skip this section if it doesn't have an ID attribute
+    const sectionId = section.getAttribute("id");
+    if (!sectionId) return;
+
     const sectionTop = section.getBoundingClientRect().top;
-    const distance = Math.abs(sectionTop - window.innerHeight / 2);
+    const distance = Math.abs(sectionTop + 200 - window.innerHeight / 2);
 
     // Update closest section if this one is nearer to the center of the viewport
     if (distance < closestDistance) {
       closestDistance = distance;
-      closestSection = section.getAttribute("id");
+      closestSection = sectionId;
     }
   });
 
