@@ -22,6 +22,10 @@ p {
     padding-left: 1rem;
 }
 
+.contact-text-area {
+    height: 10rem;
+}
+
 @font-face {
     font-family: 'Figtree';
     src: url('fonts/Figtree-Regular.woff2') format('woff2'),
