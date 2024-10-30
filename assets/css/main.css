@@ -14,6 +14,14 @@ p {
     color: var(--pico-muted-color);
 }
 
+.warning {
+    color: red;
+}
+
+.contact {
+    padding-left: 1rem;
+}
+
 @font-face {
     font-family: 'Figtree';
     src: url('fonts/Figtree-Regular.woff2') format('woff2'),
@@ -255,6 +263,14 @@ a.anchor {
     margin-bottom: 3rem;
 }
 
+.contact-fixed {
+    height: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
 .slow-transition {
     opacity: 0;
     animation: fadeIn 0.5s ease forwards 0.5s;
@@ -308,6 +324,14 @@ a.anchor {
     justify-content: left;
     gap: 30px;
     max-width: 900px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    gap: 30px;
+    max-width: 400px;
 }
 
 .text-column ul {
